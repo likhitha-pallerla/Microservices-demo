@@ -36,14 +36,14 @@ public class OrderController {
         return service.createOrder(order);
     }
 
-//    @PostMapping("/bookOrder")
-//    public Order bookOrder(@RequestBody Order order) {
-//        return service.saveOrder(order);
-//    }
-
     @PostMapping("/bookOrder")
-    public TransactionResponse bookOrder(@RequestBody TransactionRequest request) {
-       return service.saveOrder(request);
-       // return null;
+    public Order bookOrder(@RequestBody Order order) {
+        return service.saveOrder(order);
     }
+
+//    @PostMapping("/bookOrder")
+//    public TransactionResponse bookOrder(@RequestBody TransactionRequest request) {
+//       return service.saveOrder(request);
+//       // return null;
+//    }
 }
